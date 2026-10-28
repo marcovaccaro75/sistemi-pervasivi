@@ -13,6 +13,114 @@
     --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.025);
 }
 
+/* Caso di studio: Amazon Alexa */
+.case-study {
+    display: grid;
+    grid-template-columns: minmax(0, 1.4fr) minmax(260px, 0.8fr);
+    align-items: center;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.case-study-text {
+    min-width: 0;
+}
+
+.case-study-text h3 {
+    font-size: 1.35rem;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+    line-height: 1.4;
+}
+
+.case-study-text p {
+    color: var(--text-muted);
+    margin-bottom: 1.25rem;
+    line-height: 1.8;
+}
+
+/* Elenco delle caratteristiche */
+.check-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+}
+
+.check-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.65rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+.check-list li > i {
+    color: var(--accent);
+    margin-top: 0.3rem;
+    flex-shrink: 0;
+}
+
+.check-list strong {
+    color: var(--text-color);
+}
+
+/* Contenitore immagine */
+.case-study-image {
+    width: 100%;
+    min-width: 0;
+    padding: 0.65rem;
+    background: #f8fafc;
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+}
+
+.case-study-image img {
+    display: block;
+    width: 100%;
+    height: 320px;
+    object-fit: contain;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.case-study-image:hover img {
+    transform: scale(1.03);
+}
+
+.image-caption {
+    color: var(--text-muted);
+    font-size: 0.82rem;
+    line-height: 1.5;
+    text-align: center;
+    padding: 0.75rem 0.4rem 0.25rem;
+}
+
+/* Adattamento per tablet e smartphone */
+@media (max-width: 900px) {
+    .case-study {
+        grid-template-columns: 1fr;
+    }
+
+    .case-study-image {
+        max-width: 520px;
+        margin: 0 auto;
+    }
+
+    .case-study-image img {
+        height: 280px;
+    }
+}
+
+@media (max-width: 480px) {
+    .case-study-image img {
+        height: 220px;
+    }
+}
+
+
 * {
     box-sizing: border-box;
     margin: 0;
