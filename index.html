@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistemi Distribuiti & Pervasivi: Domotica | Gruppo 5</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Icone FontAwesome per un visual di livello professionale -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Sidebar di Navigazione Fissa -->
+    <aside class="sidebar">
+        <div class="brand">
+            <i class="fa-solid fa-network-wired logo-icon"></i>
+            <h2>Domotica<span>IoT</span></h2>
+        </div>
+        <nav class="nav-menu">
+            <a href="#intro" class="nav-link active"><i class="fa-solid fa-house-signal"></i> Overview</a>
+            <a href="#caratteristiche" class="nav-link"><i class="fa-solid fa-diagram-project"></i> Sistema Distribuito</a>
+            <a href="#architettura" class="nav-link"><i class="fa-solid fa-sitemap"></i> Architettura</a>
+            <a href="#vantaggi" class="nav-link"><i class="fa-solid fa-circle-check"></i> Vantaggi</a>
+            <a href="#criticita" class="nav-link"><i class="fa-solid fa-shield-halved"></i> Criticità & Sfide</a>
+            <a href="#ambiti" class="nav-link"><i class="fa-solid fa-city"></i> Ambiti Applicativi</a>
+            <a href="#demo-live" class="nav-link"><i class="fa-solid fa-microchip"></i> Demo Nodi IoT</a>
+            <a href="#caso-reale" class="nav-link"><i class="fa-solid fa-server"></i> Caso di Studio</a>
+            <a href="#bibliografia" class="nav-link"><i class="fa-solid fa-book"></i> Bibliografia</a>
+        </nav>
+        <div class="sidebar-footer">
+            <p>Sistemi & Reti • Gruppo 5</p>
+        </div>
+    </aside>
+
+    <!-- Contenuto Principale -->
+    <main class="main-content">
+
+        <!-- Hero / Header Section -->
+        <header id="intro" class="hero-section">
+            <div class="hero-badge">Progetto Sistemi Distribuiti</div>
+            <h1>Sistemi pervasivi nell'Ambito domestico</h1>
+            <p class="subtitle">Analisi approfondita dell'architettura IoT, dei protocolli di rete, dei vantaggi e delle sfide della Domotica moderna.</p>
+            
+            <div class="team-card">
+                <h3><i class="fa-solid fa-users"></i> Gruppo 5</h3>
+                <div class="team-members">
+                    <span class="member-tag"><i class="fa-solid fa-user"></i> Camilleri</span>
+                    <span class="member-tag"><i class="fa-solid fa-user"></i> Del Zotti</span>
+                    <span class="member-tag"><i class="fa-solid fa-user"></i> Vaccaro</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Section 1: Caratteristiche -->
+        <section id="caratteristiche" class="content-section">
+            <div class="section-header">
+                <h2><i class="fa-solid fa-diagram-project"></i> 1. Perché è un Sistema Distribuito?</h2>
+                <div class="divider"></div>
+            </div>
+            <p class="section-intro">
+                Un sistema domotico avanzato rappresenta il paradigma fondamentale dei <strong>Sistemi Pervasivi (Ubiquitous Computing)</strong>. Non si tratta di un singolo computer isolato, ma di una vasta rete di nodi computazionali integrati nell'ambiente fisico.
+            </p>
+
+            <div class="grid-cards">
+                <div class="card">
+                    <div class="card-icon"><i class="fa-solid fa-microchip"></i></div>
+                    <h3>Decentralizzazione & Nodi Eterogenei</h3>
+                    <p>Sensori (temperatura, presenza), attuatori (relè, valvole) e controller coordinano le attività in parallelo, comunicando su scala di rete locale.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon"><i class="fa-solid fa-eye-slash"></i></div>
+                    <h3>Trasparenza Computazionale</h3>
+                    <p>La tecnologia si "nasconde" nell'ambiente domestico. L'utente interagisce in modo naturale senza doversi preoccupare dell'ubicazione dei nodi hardware.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon"><i class="fa-solid fa-arrows-split-up-and-left"></i></div>
+                    <h3>Autonomia Localizzata</h3>
+                    <p>Singoli moduli o sottosistemi possono prendere decisioni immediate a livello periferico (Edge) garantendo la massima tempestività.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Funzionamento e Architettura -->
+        <section id="architettura" class="content-section">
+            <div class="section-header">
+                <h2><i class="fa-solid fa-sitemap"></i> 2. Funzionamento & Architettura di Rete</h2>
+                <div class="divider"></div>
+            </div>
+
+            <div class="architecture-flow">
+                <div class="flow-step">
+                    <div class="step-num">1</div>
+                    <h4>Sensori & Input</h4>
+                    <p>Raccolta dati da presenza, fumo, qualità dell'aria e consumo elettrico.</p>
+                </div>
+                <div class="flow-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+                <div class="flow-step">
+                    <div class="step-num">2</div>
+                    <h4>Protocolli IoT</h4>
+                    <p>Trasmissione dati via Zigbee, Z-Wave, Matter, Wi-Fi 6, Thread.</p>
+                </div>
+                <div class="flow-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+                <div class="flow-step">
+                    <div class="step-num">3</div>
+                    <h4>Gateway / Edge Hub</h4>
+                    <p>Elaborazione locale delle regole di automazione con minima latenza.</p>
+                </div>
+                <div class="flow-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+                <div class="flow-step">
+                    <div class="step-num">4</div>
+                    <h4>Attuatori & Cloud</h4>
+                    <p>Esecuzione comandi fisici e sync opzionale da remoto via MQTT/HTTP.</p>
+                </div>
+            </div>
+
+            <div class="info-box">
+                <h4><i class="fa-solid fa-circle-info"></i> Modello Architetturale Ibrido (Edge-to-Cloud)</h4>
+                <p>La moderna domotica evita la dipendenza totale dal Cloud. Gli algoritmi di decisione immediata (es. spegnimento del gas in caso di perdita) vengono gestiti al livello <strong>Edge</strong> (Hub locale), mentre il <strong>Cloud</strong> viene utilizzato solo per la gestione da remoto e l'addestramento di modelli di Machine Learning sui consumi.</p>
+            </div>
+        </section>
+
+        <!-- Section 3: Vantaggi -->
+        <section id="vantaggi" class="content-section">
+            <div class="section-header">
+                <h2><i class="fa-solid fa-circle-check"></i> 3. Vantaggi Operativi ed Economici</h2>
+                <div class="divider"></div>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-item">
+                    <i class="fa-solid fa-leaf feature-icon"></i>
+                    <div>
+                        <h4>Efficienza Energetica</h4>
+                        <p>Ottimizzazione fino al 30% dei consumi grazie alla termoregolazione a zone e all'integrazione con impianti fotovoltaici.</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <i class="fa-solid fa-shield-halved feature-icon"></i>
+                    <div>
+                        <h4>Sicurezza Proattiva</h4>
+                        <p>Rilevamento tempestivo di fughe di gas, perdite d'acqua, intrusioni con notifica immediata e azioni automatiche di blocco.</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <i class="fa-solid fa-wheelchair feature-icon"></i>
+                    <div>
+                        <h4>Ambient Assisted Living (AAL)</h4>
+                        <p>Supporto fondamentale per anziani o persone con disabilità attraverso comandi vocali, scenari automatici e chiamate d'emergenza.</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <i class="fa-solid fa-sliders feature-icon"></i>
+                    <div>
+                        <h4>Comfort Personalizzato</h4>
+                        <p>Scenari domotici configurabili in base agli orari, all'esposizione solare o all'occupazione effettiva degli ambienti.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Limiti e Criticità -->
+        <section id="criticita" class="content-section">
+            <div class="section-header">
+                <h2><i class="fa-solid fa-triangle-exclamation"></i> 4. Limiti e Criticità Tecniche</h2>
+                <div class="divider"></div>
+            </div>
+
+            <div class="threats-container">
+                <div class="threat-card alert-high">
+                    <h3><i class="fa-solid fa-bug"></i> Sicurezza & Privacy</h3>
+                    <p>I dispositivi IoT presentano spesso firmware non aggiornati, diventando vettori di attacco (botnet, intrusioni informatiche). I dati comportamentali degli utenti devono essere protetti da accessi non autorizzati.</p>
+                </div>
+                <div class="threat-card alert-medium">
+                    <h3><i class="fa-solid fa-network-wired"></i> Interoperabilità</h3>
+                    <p>La presenza di molteplici standard proprietari (Zigbee vs Z-Wave vs Wi-Fi) ha storicamente creato ecosistemi isolati. L'adozione del nuovo standard unificato <strong>Matter</strong> punta a risolvere questo limite.</p>
+                </div>
+                <div class="threat-card alert-low">
+                    <h3><i class="fa-solid fa-wifi-slash"></i> Dipendenza dalla Rete & Single Point of Failure</h3>
+                    <p>Se la rete locale o l'hub di gestione centrale smettono di funzionare, il rischio è la perdita di controllo delle automazioni principali, a meno che non siano presenti comandi manuali di backup.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Ambiti Applicativi -->
+        <section id="ambiti" class="content-section">
+            <div class="section-header">
+                <h2><i class="fa-solid fa-city"></i> 5. Ambiti di Utilizzo Reali</h2>
+                <div class="divider"></div>
+            </div>
+
+            <div class="grid-3">
+                <div class="scope-box">
+                    <i class="fa-solid fa-house"></i>
+                    <h3>Residential Smart Home</h3>
+                    <p>Sistemi di illuminazione integrati, gestione del clima, serrature smart e gestione elettrodomestici.</p>
+                </div>
+                <div class="scope-box">
+                    <i class="fa-solid fa-building-user"></i>
+                    <h3>Smart Buildings</h3>
+                    <p>Uffici e hotel integrati con sistemi BMS (Building Management System) per la riduzione dell'impronta ecologica.</p>
+                </div>
+                <div class="scope-box">
+                    <i class="fa-solid fa-user-nurse"></i>
+                    <h3>Sanità Domiciliare</h3>
+                    <p>Monitoraggio non invasivo dei parametri vitali e prevenzione incidenti domestici per soggetti vulnerabili.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Widget / Live Simulator -->
+        <section id="demo-live" class="content-section highlight-section">
+            <div class="section-header">
+                <h2><i class="fa-solid fa-laptop-code"></i> Simulatore Interattivo di Nodi Distribuiti</h2>
+                <div class="divider"></div>
+            </div>
+            <p>Interagisci con i nodi simulati sottostanti per osservare la risposta del Gateway centrale in tempo reale:</p>
+
+            <div class="simulator-wrapper">
+                <div class="node-list">
+                    <div class="node-item" id="node-temp">
+                        <i class="fa-solid fa-temperature-high"></i>
+                        <div class="node-info">
+                            <span>Sensore Termico</span>
+                            <small id="temp-val">21.5 °C</small>
+                        </div>
+                        <button class="btn-action" onclick="toggleTemperature()">Aumenta T°</button>
+                    </div>
+
+                    <div class="node-item" id="node-light">
+                        <i class="fa-solid fa-lightbulb"></i>
+                        <div class="node-info">
+                            <span>Relè Luce Soggiorno</span>
+                            <small id="light-status">OFF</small>
+                        </div>
+                        <button class="btn-action" onclick="toggleLight()">Toggle</button>
+                    </div>
+
+                    <div class="node-item" id="node-motion">
+                        <i class="fa-solid fa-person-walking"></i>
+                        <div class="node-info">
+                            <span>Sensore Presenza</span>
+                            <small id="motion-status">Nessun movimento</small>
+                        </div>
+                        <button class="btn-action" onclick="triggerMotion()">Simula Presenza</button>
+                    </div>
+                </div>
+
+                <div class="hub-console">
+                    <h4><i class="fa-solid fa-terminal"></i> Log Console del Hub Centrale</h4>
+                    <div id="console-logs" class="logs-container">
+                        <p>[SYSTEM] Gateway avviato. Nodi collegati via protocollo Zigbee.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 6: Caso di Studio / Esempio Reale -->
+        <section id="caso-reale" class="content-section">
+            <div class="section-header">
+                <h2><i class="fa-solid fa-server"></i> 6. Esempio Reale: Home Assistant</h2>
+                <div class="divider"></div>
+            </div>
+
+            <div class="case-study">
+                <div class="case-study-text">
+                    <h3>Home Assistant: L'Eccellenza dell'Automazione Locale</h3>
+                    <p><strong>Home Assistant</strong> è il punto di riferimento globale per le piattaforme open-source di domotica. A differenza dei sistemi strettamente cloud-based, Home Assistant viene installato su hardware locale (es. Raspberry Pi o Server dedicato) mantenendo il totale controllo dei dati all'interno della rete di casa.</p>
+                    <ul class="check-list">
+                        <li><i class="fa-solid fa-check"></i> Supporto ad oltre 2.000 integrazioni e protocolli differenti.</li>
+                        <li><i class="fa-solid fa-check"></i> Funzionamento 100% offline in assenza di connessione internet.</li>
+                        <li><i class="fa-solid fa-check"></i> Motore di automazioni evoluto basato su eventi e condizioni reali.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 7: Bibliografia -->
+        <section id="bibliografia" class="content-section">
+            <div class="section-header">
+                <h2><i class="fa-solid fa-book"></i> 7. Bibliografia & Sitografia</h2>
+                <div class="divider"></div>
+            </div>
+
+            <ul class="sources-list">
+                <li>
+                    <i class="fa-solid fa-link"></i>
+                    <div>
+                        <strong>Home Assistant Official Documentation</strong> - Guida all'architettura e alle integrazioni domotiche locali.
+                        <br><a href="https://www.home-assistant.io" target="_blank">https://www.home-assistant.io</a>
+                    </div>
+                </li>
+                <li>
+                    <i class="fa-solid fa-link"></i>
+                    <div>
+                        <strong>Connectivity Standards Alliance (CSA)</strong> - Specifiche e risorse tecniche sul nuovo protocollo unificato Matter.
+                        <br><a href="https://csa-iot.org" target="_blank">https://csa-iot.org</a>
+                    </div>
+                </li>
+                <li>
+                    <i class="fa-solid fa-book-journal-whills"></i>
+                    <div>
+                        <strong>Tanenbaum, A. S., & Van Steen, M.</strong> - <em>Distributed Systems: Principles and Paradigms</em>. Riferimento per i concetti di trasparenza, nodi e tolleranza ai guasti nei sistemi distribuiti.
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <footer>
+            <p>&copy; 2026 - Progetto Sistemi Distribuiti e Pervasivi | Gruppo 5 (Camilleri, Del Zotti, Vaccaro)</p>
+        </footer>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
